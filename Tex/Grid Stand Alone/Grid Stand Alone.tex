@@ -1,11 +1,16 @@
 \documentclass[tikz]{standalone}
+\usepackage{fontspec}
+\setmainfont{Futura}
 \begin{document}
 %
 \begin{tikzpicture}
 % Draw the grid
-\tikzset{help lines/.style={color=gray!50}}
-\draw[thick,densely dashed,step=1cm,help lines] (0,0) grid (4,8);
-\draw[ultra thin,densely dashed, step=.5cm,help lines] (0,0) grid (4,8);
+\tikzset{help lines/.style={color=gray!25}}
+\tikzstyle{EGdensely dotted}=          [dash pattern=on \pgflinewidth off 0.035cm]
+\draw[thick,dashed, step=1cm,help lines] (0,0) grid (4,8);
+\draw[thin,EGdensely dotted, step=1cm,help lines,xshift=0.5cm,yshift=0.5cm] (0.0,0.0) grid (3.5,7.5);
+\draw[thin,EGdensely dotted, step=1cm,help lines,xshift=0.0cm,yshift=0.5cm] (0.0,0.0) grid (0.5,7.5);
+\draw[thin,EGdensely dotted, step=1cm,help lines,xshift=0.5cm,yshift=0.0cm] (0.0,0.0) grid (3.5,0.5);
 % Draw axes
 \draw[ultra thick] (0,0) -- (4,0);
 \draw[ultra thick] (4,0) -- (4,8);
@@ -15,21 +20,21 @@
 % the co-ordinates -- major
 	%bottom
 \foreach \x in {0,1,...,4} {     % for x-axis
-\draw [thick] (\x,0) -- (\x,-0.2);
+\draw [thick] (\x,0) -- (\x,-0.225);
 }
 
 	%top
 \foreach \x in {0,1,...,4} {     % for x-axis
-\draw [thick] (\x,8) -- (\x,8.2);
+\draw [thick] (\x,8) -- (\x,8.225);
 }
 	%left
 \foreach \y in {0,1,...,8} {   %% for y-axis
-\draw [thick] (0,\y) -- (-0.2,\y);
+\draw [thick] (0,\y) -- (-0.225,\y);
 }
 
 	%right
 \foreach \y in {0,1,...,8} {   %% for y-axis
-\draw [thick] (4,\y) -- (4.2,\y);
+\draw [thick] (4,\y) -- (4.225,\y);
 }
 
 % the numbers
@@ -41,19 +46,73 @@
 % the co-ordinates --half step
 	%bottom
 \foreach \x in {.5,1.5,...,3.5} {
-\draw [thin] (\x,0) -- (\x,-0.15);
+\draw [thin] (\x,0) -- (\x,-0.175);
 }
 	%top
 \foreach \x in {.5,1.5,...,3.5} {
-\draw [thin] (\x,8) -- (\x,8.15);
+\draw [thin] (\x,8) -- (\x,8.175);
 }
 	%left
 \foreach \y in {.5,1.5,...,7.5} {
-\draw [thin] (0,\y) -- (-0.15,\y);
+\draw [thin] (0,\y) -- (-0.175,\y);
 }
 	%right
 \foreach \y in {.5,1.5,...,7.5} {
-\draw [thin] (4,\y) -- (4.15,\y);
+\draw [thin] (4,\y) -- (4.175,\y);
+}
+
+% the co-ordinates --quarter step
+	%bottom
+\foreach \x in {.25,.5,...,3.75} {
+\draw [thin] (\x,0) -- (\x,-0.125);
+}
+	%top
+\foreach \x in {.25,.5,...,3.75} {
+\draw [thin] (\x,8) -- (\x,8.125);
+}
+	%left
+\foreach \y in {.25,.5,...,7.75} {
+\draw [thin] (0,\y) -- (-0.125,\y);
+}
+	%right
+\foreach \y in {.25,.5,...,7.75} {
+\draw [thin] (4,\y) -- (4.125,\y);
+}
+
+% the co-ordinates --8th step
+	%bottom
+\foreach \x in {.125,.25,...,3.875} {
+\draw [thin] (\x,0) -- (\x,-0.1);
+}
+	%top
+\foreach \x in {.125,.25,...,3.875} {
+\draw [thin] (\x,8) -- (\x,8.1);
+}
+	%left
+\foreach \y in {.125,.25,...,7.875} {
+\draw [thin] (0,\y) -- (-0.1,\y);
+}
+	%right
+\foreach \y in {.125,.25,...,7.875} {
+\draw [thin] (4,\y) -- (4.1,\y);
+}
+
+% the co-ordinates --16th step
+	%bottom
+\foreach \x in {.0625,.125,...,3.9375} {
+\draw [thin] (\x,0) -- (\x,-0.075);
+}
+	%top
+\foreach \x in {.0625,.125,...,3.9375} {
+\draw [thin] (\x,8) -- (\x,8.075);
+}
+	%left
+\foreach \y in {.0625,.125,...,7.9375} {
+\draw [thin] (0,\y) -- (-0.075,\y);
+}
+	%right
+\foreach \y in {.0625,.125,...,7.9375} {
+\draw [thin] (4,\y) -- (4.075,\y);
 }
 \end{tikzpicture}
 %
