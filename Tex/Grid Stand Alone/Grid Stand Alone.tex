@@ -43,7 +43,7 @@
 \foreach \y in {0,1,...,8} { \node [anchor=east] at (-0.3,\y) {\y}; }
 \foreach \y in {0,1,...,8} { \node [anchor=west] at (4.3,\y) {\y}; }
 
-% the co-ordinates --half step
+% the co-ordinates --half step (6 inchs)
 	%bottom
 \foreach \x in {.5,1.5,...,3.5} {
 \draw [thin] (\x,0) -- (\x,-0.175);
@@ -61,59 +61,131 @@
 \draw [thin] (4,\y) -- (4.175,\y);
 }
 
-% the co-ordinates --quarter step
+% the co-ordinates --third step
 	%bottom
-\foreach \x in {.25,.5,...,3.75} {
+\foreach \x in {0,0.33333333333,...,4} {
 \draw [thin] (\x,0) -- (\x,-0.125);
 }
 	%top
-\foreach \x in {.25,.5,...,3.75} {
+\foreach \x in {0,.33333333333,...,4} {
 \draw [thin] (\x,8) -- (\x,8.125);
 }
 	%left
-\foreach \y in {.25,.5,...,7.75} {
+\foreach \y in {0,.33333333333,...,8} {
 \draw [thin] (0,\y) -- (-0.125,\y);
 }
 	%right
-\foreach \y in {.25,.5,...,7.75} {
+\foreach \y in {0,.33333333333,...,8} {
 \draw [thin] (4,\y) -- (4.125,\y);
 }
 
-% the co-ordinates --8th step
+
+% the co-ordinates --6th step
 	%bottom
-\foreach \x in {.125,.25,...,3.875} {
+\foreach \x in {0,.16666666666,...,4} {
 \draw [thin] (\x,0) -- (\x,-0.1);
 }
 	%top
-\foreach \x in {.125,.25,...,3.875} {
+\foreach \x in {0,.16666666666,...,4} {
 \draw [thin] (\x,8) -- (\x,8.1);
 }
 	%left
-\foreach \y in {.125,.25,...,7.875} {
+\foreach \y in {0,.16666666666,...,8} {
 \draw [thin] (0,\y) -- (-0.1,\y);
 }
 	%right
-\foreach \y in {.125,.25,...,7.875} {
+\foreach \y in {0,.16666666666,...,8} {
 \draw [thin] (4,\y) -- (4.1,\y);
 }
 
-% the co-ordinates --16th step
+
+% the co-ordinates --12th step
 	%bottom
-\foreach \x in {.0625,.125,...,3.9375} {
+\foreach \x in {0,.08333333333,...,4} {
 \draw [thin] (\x,0) -- (\x,-0.075);
 }
 	%top
-\foreach \x in {.0625,.125,...,3.9375} {
+\foreach \x in {0,.08333333333,...,4} {
 \draw [thin] (\x,8) -- (\x,8.075);
 }
 	%left
-\foreach \y in {.0625,.125,...,7.9375} {
+\foreach \y in {0,.08333333333,...,8} {
 \draw [thin] (0,\y) -- (-0.075,\y);
 }
 	%right
-\foreach \y in {.0625,.125,...,7.9375} {
+\foreach \y in {0,.08333333333,...,8} {
 \draw [thin] (4,\y) -- (4.075,\y);
 }
+
+
 \end{tikzpicture}
 %
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+%For inch style seperation 1/16th
+
+%% the co-ordinates --quarter step
+%	%bottom
+%\foreach \x in {.25,.5,...,3.75} {
+%\draw [thin] (\x,0) -- (\x,-0.125);
+%}
+%	%top
+%\foreach \x in {.25,.5,...,3.75} {
+%\draw [thin] (\x,8) -- (\x,8.125);
+%}
+%	%left
+%\foreach \y in {.25,.5,...,7.75} {
+%\draw [thin] (0,\y) -- (-0.125,\y);
+%}
+%	%right
+%\foreach \y in {.25,.5,...,7.75} {
+%\draw [thin] (4,\y) -- (4.125,\y);
+%}
+%
+%% the co-ordinates --8th step
+%	%bottom
+%\foreach \x in {.125,.25,...,3.875} {
+%\draw [thin] (\x,0) -- (\x,-0.1);
+%}
+%	%top
+%\foreach \x in {.125,.25,...,3.875} {
+%\draw [thin] (\x,8) -- (\x,8.1);
+%}
+%	%left
+%\foreach \y in {.125,.25,...,7.875} {
+%\draw [thin] (0,\y) -- (-0.1,\y);
+%}
+%	%right
+%\foreach \y in {.125,.25,...,7.875} {
+%\draw [thin] (4,\y) -- (4.1,\y);
+%}
+%
+%% the co-ordinates --16th step
+%	%bottom
+%\foreach \x in {.0625,.125,...,3.9375} {
+%\draw [thin] (\x,0) -- (\x,-0.075);
+%}
+%	%top
+%\foreach \x in {.0625,.125,...,3.9375} {
+%\draw [thin] (\x,8) -- (\x,8.075);
+%}
+%	%left
+%\foreach \y in {.0625,.125,...,7.9375} {
+%\draw [thin] (0,\y) -- (-0.075,\y);
+%}
+%	%right
+%\foreach \y in {.0625,.125,...,7.9375} {
+%\draw [thin] (4,\y) -- (4.075,\y);
+%}
