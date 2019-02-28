@@ -4,8 +4,4 @@ Just a simple design template to help you to quickly figure out how you are goin
 ## The Template
 The template can be downloaded [Here](https://DrGrafil.github.io/Plywood-Layout/Plywood-Design-Template.pdf).
 
-
 ---
-
-
-
